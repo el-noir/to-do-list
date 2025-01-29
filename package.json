@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "backend of todo list",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/index.js"
   },
   "keywords": [
     "todo",
@@ -12,5 +13,12 @@
     "javascript"
   ],
   "author": "el-noir",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "prettier": "^3.4.2"
+  }
 }
