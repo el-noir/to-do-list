@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import todoRouter from './routes/todo.routes.js'
-
+import { ApiError } from './utils/apiError.js';
 const app = express();
 
 app.use(cors({
@@ -15,7 +15,7 @@ app.use(express.json({
 
 app.use(express.static('public'))
 
-app.use('/api/v1/todos', todoRouter);
+app.use('/api/v1', todoRouter);
 
 app.use((err, req, res, next)=> {
     if(!(err instanceof ApiError)) {
