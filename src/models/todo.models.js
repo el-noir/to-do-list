@@ -22,4 +22,4 @@ const todoSchema = new mongoose.Schema({
    ]
 }, {timestamps: true})
 
-export const todo = todoSchema.model('todo', todoSchema);
+export const todo = mongoose.model('todo', todoSchema);
